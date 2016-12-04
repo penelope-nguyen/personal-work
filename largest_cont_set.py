@@ -25,21 +25,22 @@ def max_cont (num_set):
                 
             end_pos -= 1
         
-    return (max_pos, total) 
+    print ("LARGEST SUM:", total)
+    return max_pos 
 
-test = [-4, 0, 2, 4, -2, -3, 5, 1]
+
+test1 = [-4, 0, 2, 4, -2, -3, 5, 1]
 test2 = [-2, -19, -4, -1, -2, -5]
 test3 = [0, 0, 0, 0]
 test4 = [-1, 0, 0, -4]
 test5 = [-1, 0, 1, -4]
 test6 = [-3]
 
-print(max_cont(test), "// test:", test)
-print(max_cont(test2), "// test:", test2)
-print(max_cont(test3), "// test:", test3)
-print(max_cont(test4), "// test:", test4)
-print(max_cont(test5), "// test:", test5)
-print(max_cont(test6), "// test:", test6)
+tests = (test1, test2, test3, test4, test5, test6)
+
+for test in tests: 
+    print("TEST:", test)
+    print("SET:", max_cont(test), "\n")
 
 """
 
@@ -47,16 +48,32 @@ print(max_cont(test6), "// test:", test6)
 OUTPUT
 //////
 
-([1, 7], 7) // test: [-4, 0, 2, 4, -2, -3, 5, 1]
-([3, 3], -1) // test: [-2, -19, -4, -1, -2, -5]
-([0, 3], 0) // test: [0, 0, 0, 0]
-([1, 2], 0) // test: [-1, 0, 0, -4]
-([1, 2], 1) // test: [-1, 0, 1, -4]
-([0, 0], -3) // test: [-3]
+TEST: [-4, 0, 2, 4, -2, -3, 5, 1]
+LARGEST SUM: 7
+SET: (1, 7) 
 
-""" 
+TEST: [-2, -19, -4, -1, -2, -5]
+LARGEST SUM: -1
+SET: (3, 3) 
 
-"""
+TEST: [0, 0, 0, 0]
+LARGEST SUM: 0
+SET: (0, 3) 
+
+TEST: [-1, 0, 0, -4]
+LARGEST SUM: 0
+SET: (1, 2) 
+
+TEST: [-1, 0, 1, -4]
+LARGEST SUM: 1
+SET: (1, 2) 
+
+TEST: [-3]
+LARGEST SUM: -3
+SET: (0, 0) 
+
+[Finished in 0.1s]
+
 /// BEWARE: DOWN BELOW ARE PROTOTYPES OF THIS FUNCTION /// 
 
 ///////////
