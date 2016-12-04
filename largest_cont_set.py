@@ -1,6 +1,8 @@
 # VERSION 1.4
 # PURPOSE: Given a list of numbers, function returns the start and end position of the continguous set with the largest sum.
-
+# List of numbers can contain 0, negative numbers, or positive numbers.
+# This function works by comparing every permutation of the list to find the largest sum. 
+# It will not repeat sets so its runtime is O(n!), n being the size of the list. 
 
 def max_cont (num_set):
     
@@ -41,7 +43,9 @@ print(max_cont(test6), "// test:", test6)
 
 """
 
+//////
 OUTPUT
+//////
 
 ([1, 7], 7) // test: [-4, 0, 2, 4, -2, -3, 5, 1]
 ([3, 3], -1) // test: [-2, -19, -4, -1, -2, -5]
@@ -52,7 +56,13 @@ OUTPUT
 
 """ 
 
-""" 
+"""
+/// BEWARE: DOWN BELOW ARE PROTOTYPES OF THIS FUNCTION /// 
+
+///////////
+VERSION 1.1 
+///////////
+
 def max_cont(num_set):
     #num_list = []
     #pos_list = []
@@ -86,7 +96,11 @@ def max_cont(num_set):
     if current_set:
         pos_list.append(current_pos)
         num_list.append(current_set)
-    /////////////////////////////////////////////////// 
+        
+ ///////////
+ VERSION 1.2 
+ ///////////
+ 
         if num < 0:
             if current_set: 
                 num_list.append(current_set)
@@ -151,7 +165,9 @@ print(max_cont(test5))
 
 """ 
 """ 
-
+///////////
+VERSION 1.3
+///////////
 def max_cont(num_set):
 
     current_set = [] # current_set is a list of the start and end position of a contiguous non-negative set 
